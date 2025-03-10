@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# content (uncomment to exclude actual content from git)
+# /content/projects/*.md
+# /public/media/projects/*
+# !public/media/projects/.gitkeep
+
