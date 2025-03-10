@@ -134,3 +134,6 @@ dist
 # /public/media/projects/*
 # !public/media/projects/.gitkeep
 
+# Personal notes
+PERSONAL_NOTES.md
+
