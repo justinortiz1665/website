@@ -35,7 +35,7 @@ export default function Home() {
             practices and innovative rehabilitation techniques.
           </p>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
-            <Button asChild className="bg-black hover:bg-primary transition-colors">
+            <Button asChild className="bg-black hover:bg-primary text-white transition-colors">
               <Link href="/about">Learn More</Link>
             </Button>
             <Button variant="outline" asChild>
