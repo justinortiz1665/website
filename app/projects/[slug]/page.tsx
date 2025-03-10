@@ -3,8 +3,15 @@ import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { getProjectBySlug, markdownToHtml } from "@/lib/markdown"
+import { getProjectBySlug, markdownToHtml, getProjectSlugs } from "@/lib/markdown"
 import { YoutubeEmbed } from "@/components/youtube-embed"
+
+export function generateStaticParams() {
+  const slugs = getProjectSlugs()
+  return slugs.map(slug => ({
+    slug: slug
+  }))
+}
 
 interface ProjectPageProps {
   params: {
