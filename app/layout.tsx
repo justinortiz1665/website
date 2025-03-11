@@ -4,12 +4,14 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { getSiteConfig } from "@/lib/env"
 
 const inter = Inter({ subsets: ["latin"] })
+const { siteName, siteDescription } = getSiteConfig()
 
 export const metadata: Metadata = {
-  title: "Justin Ortiz, ATC - Portfolio",
-  description: "Professional portfolio of Justin Ortiz, Athletic Trainer",
+  title: siteName,
+  description: siteDescription,
 }
 
 export default function RootLayout({
