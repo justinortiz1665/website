@@ -129,6 +129,12 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# Replit specific files
+.replit
+
+# package lock files
+package-lock.json
+
 # content - uncommented to exclude actual content from git
 /content/projects/*.md
 /public/media/projects/*
