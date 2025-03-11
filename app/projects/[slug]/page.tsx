@@ -3,7 +3,7 @@ import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { getProjectBySlug, markdownToHtml, getProjectSlugs, getImageUrl } from "@/lib/markdown"
+import { getProjectBySlug, markdownToHtml, getProjectSlugs } from "@/lib/markdown"
 import { YoutubeEmbed } from "@/components/youtube-embed"
 
 export function generateStaticParams() {
@@ -47,8 +47,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="order-first px-4 md:order-last md:px-0">
           <div className="relative aspect-video overflow-hidden rounded-lg">
             <Image
-              src={getImageUrl(project.image, "16:9") || "/placeholder.svg"}
-              alt={typeof project.image === 'object' ? project.image.alt || project.title : project.title}
+              src={project.image || "/placeholder.svg"}
+              alt={project.title}
               fill
               className="object-cover"
               priority

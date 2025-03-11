@@ -6,7 +6,6 @@ import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import type { Project } from "@/lib/markdown"
-import { getImageUrl } from "@/lib/markdown"
 
 export default function PortfolioSection({
   projects,
@@ -74,7 +73,7 @@ export default function PortfolioSection({
               className="group relative overflow-hidden rounded-lg border bg-background p-2"
             >
               <Image
-                src={getImageUrl(project.thumbnail || project.image) || "/placeholder.svg?height=600&width=600"}
+                src={project.image || "/placeholder.svg?height=600&width=600"}
                 alt={project.title}
                 width={600}
                 height={600}
