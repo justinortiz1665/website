@@ -27,7 +27,7 @@ export default function PortfolioSection({
       const filtered = visibleProjects.filter((project) => project.tags.some((tag) => selectedTags.includes(tag)))
       setFilteredProjects(filtered)
     }
-  }, [selectedTags]) // Remove visibleProjects from the dependency array since it's not changing
+  }, [selectedTags, visibleProjects])
 
   // Toggle tag selection
   const toggleTag = (tag: string) => {
