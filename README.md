@@ -2,6 +2,19 @@ Welcome to the NextJS base template bootstrapped using the `create-next-app`. Th
 
 ## Getting Started
 
+### Environment Setup
+
+This project uses environment variables for configuration. To get started:
+
+1. Copy the `.env.example` file to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+   
+2. Edit the `.env` file with your own URLs, links, and configuration values.
+
+The environment variables are used for social media links, media URLs, and site configuration.
+
 Hit the run button to start the development server.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
