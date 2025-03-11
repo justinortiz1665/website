@@ -129,11 +129,13 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# content (uncomment to exclude actual content from git)
-# /content/projects/*.md
-# /public/media/projects/*
-# !public/media/projects/.gitkeep
+# content - uncommented to exclude actual content from git
+/content/projects/*.md
+/public/media/projects/*
+!/public/media/projects/.gitkeep
 
 # Personal notes
 PERSONAL_NOTES.md
 
+# Cache directory
+/cache/
