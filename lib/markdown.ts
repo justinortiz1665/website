@@ -34,6 +34,8 @@ export interface ProjectFrontmatter {
   // Add a featured image specifically for thumbnails (1:1 ratio)
   thumbnail?: string | ImageMetadata
   tags: string[]
+  // Draft flag to indicate project is not ready to be displayed on the homepage
+  draft?: boolean
   features?: {
     title: string
     description: string
@@ -118,13 +120,15 @@ export function getProjectBySlug(slug: string): Project | null {
 }
 
 // Get all projects
-export function getAllProjects(): Project[] {
+export function getAllProjects(includeDrafts = false): Project[] {
   if (!isServer) return []
   
   const slugs = getProjectSlugs()
   const projects = slugs
     .map((slug) => getProjectBySlug(slug))
     .filter((project): project is Project => project !== null)
+    // Filter out draft projects unless specifically requested
+    .filter((project) => includeDrafts || !project.draft)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return projects
