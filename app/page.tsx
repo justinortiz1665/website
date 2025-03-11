@@ -16,7 +16,7 @@ export default function Home() {
         <div className="order-1 px-4 md:order-none md:px-0">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <Image
-              src="/placeholder.svg?height=1000&width=800"
+              src="https://justinortizcreatives.com/media/homepage.jpeg"
               alt="Profile Image"
               fill
               className="object-cover"
