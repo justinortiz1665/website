@@ -31,8 +31,7 @@ export default function Home() {
             Healthcare Professional & Lego Builder
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg md:text-xl">
-            Dedicated to optimizing athletic performance and ensuring athlete well-being through evidence-based
-            practices and innovative rehabilitation techniques.
+            Hi, I’m Justin Ortiz. Currently based in the Bay Area. I’m a builder and explorer. I am an athletic trainer with 10+ years of sports medicine experience. A former content creator and a techie at heart. Always looking for new opportunities to transition to business operations and product management roles.
           </p>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
             <Button asChild className="bg-black hover:bg-primary text-white transition-colors">

@@ -44,7 +44,7 @@ export default function PortfolioSection({
       <div className="flex flex-col gap-3 md:gap-4">
         <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-4xl">Portfolio</h2>
         <p className="text-base text-muted-foreground sm:text-lg">
-          Explore my latest projects and professional work in athletic training and sports medicine.
+          Explore my latest projects and professional work in AI, software development, and data analytics.
         </p>
       </div>
 

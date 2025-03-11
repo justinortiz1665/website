@@ -12,7 +12,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-1 items-center justify-end gap-4">
           <Link
-            href="https://x.com"
+            href="https://x.com/justinbortiz"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl bg-background p-2 hover:bg-accent"
@@ -21,7 +21,7 @@ export default function Footer() {
             <span className="sr-only">X (formerly Twitter)</span>
           </Link>
           <Link
-            href="https://github.com"
+            href="https://github.com/justinortiz1665"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl bg-background p-2 hover:bg-accent"
@@ -30,7 +30,7 @@ export default function Footer() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/justinbortiz/"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl bg-background p-2 hover:bg-accent"
@@ -39,7 +39,7 @@ export default function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
-            href="https://youtube.com"
+            href="https://www.youtube.com/@justinbortiz_atc"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl bg-background p-2 hover:bg-accent"
@@ -48,7 +48,7 @@ export default function Footer() {
             <span className="sr-only">YouTube</span>
           </Link>
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/justinbortiz/"
             target="_blank"
             rel="noreferrer"
             className="rounded-2xl bg-background p-2 hover:bg-accent"
