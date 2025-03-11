@@ -14,20 +14,21 @@ export default function PortfolioSection({
   projects: Project[]
   tags: string[]
 }) {
-  // Filter out any draft projects before initial state setup
-  const visibleProjects = projects.filter(project => !project.draft)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>(visibleProjects)
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([])
 
-  // Filter projects when selected tags change
+  // Filter projects when selected tags change or when projects change
   useEffect(() => {
+    // Filter out draft projects inside the effect
+    const visibleProjects = projects.filter(project => !project.draft)
+    
     if (selectedTags.length === 0) {
       setFilteredProjects(visibleProjects)
     } else {
       const filtered = visibleProjects.filter((project) => project.tags.some((tag) => selectedTags.includes(tag)))
       setFilteredProjects(filtered)
     }
-  }, [selectedTags, visibleProjects])
+  }, [selectedTags, projects])
 
   // Toggle tag selection
   const toggleTag = (tag: string) => {
