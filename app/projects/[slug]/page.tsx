@@ -45,10 +45,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
         <div className="order-first px-4 md:order-last md:px-0">
-          <div className="relative aspect-video overflow-hidden rounded-lg">
+          <div className="relative aspect-square overflow-hidden rounded-lg">
             <Image
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
+              src={typeof project.image === 'string' 
+                ? project.image 
+                : project.image?.src || "/placeholder.svg"}
+              alt={typeof project.image === 'string' 
+                ? project.title 
+                : project.image?.alt || project.title}
               fill
               className="object-cover"
               priority
