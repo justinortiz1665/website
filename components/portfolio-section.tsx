@@ -81,7 +81,9 @@ export default function PortfolioSection({
               />
               <div className="p-4">
                 <h3 className="font-semibold">{project.title}</h3>
-                <p className="mb-3 text-sm text-muted-foreground">{project.summary.substring(0, 100)}...</p>
+                <p className="mb-3 text-sm text-muted-foreground">
+                  {project.summary ? `${project.summary.substring(0, 100)}...` : 'No summary available'}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="secondary" className="text-xs">
