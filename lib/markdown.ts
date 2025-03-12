@@ -1,9 +1,10 @@
-
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+// Remove the import for now if it's causing issues
+// import remarkGfm from 'remark-gfm'
 
 // Define the content directory path
 const contentDirectory = process.cwd() + '/content'
@@ -62,7 +63,7 @@ const isServer = typeof window === 'undefined'
 // Get all project slugs
 export function getProjectSlugs(): string[] {
   if (!isServer) return []
-  
+
   try {
     if (!existsSync(projectsDirectory)) {
       return []
@@ -80,7 +81,7 @@ export function getProjectSlugs(): string[] {
 // Get project data by slug
 export function getProjectBySlug(slug: string): Project | null {
   if (!isServer) return null
-  
+
   try {
     const fullPath = join(projectsDirectory, `${slug}.md`)
 
@@ -122,7 +123,7 @@ export function getProjectBySlug(slug: string): Project | null {
 // Get all projects
 export function getAllProjects(includeDrafts = false): Project[] {
   if (!isServer) return []
-  
+
   const slugs = getProjectSlugs()
   const projects = slugs
     .map((slug) => getProjectBySlug(slug))
@@ -137,7 +138,7 @@ export function getAllProjects(includeDrafts = false): Project[] {
 // Get all unique tags from all projects
 export function getAllTags(): string[] {
   if (!isServer) return []
-  
+
   const projects = getAllProjects()
   const tagsSet = new Set<string>()
 
@@ -158,10 +159,10 @@ export async function markdownToHtml(markdown: string): Promise<string> {
     .replace(/\n(#{1,6})\s/g, '\n\n$1 ')
     // Ensure lists have proper spacing
     .replace(/\n-\s/g, '\n\n- ');
-  
+
   const result = await remark()
     .use(html, { sanitize: false }) // Don't sanitize to allow proper HTML
     .process(processedMarkdown);
-  
+
   return result.toString();
 }
