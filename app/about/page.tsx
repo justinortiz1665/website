@@ -19,23 +19,23 @@ export default function AboutPage() {
 
       {/* About Text */}
       <div className="prose prose-gray max-w-none px-4 md:px-0">
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
           Currently based in the Bay Area.
         </p>
         
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
           I'm a builder and explorer.
         </p>
         
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
           Former content creator and athletic trainer.
         </p>
         
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
           I am a sports medicine practitioner by trade but a techie at heart.
         </p>
         
-        <p className="text-base text-muted-foreground sm:text-lg">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
           On a journey to a new career in Business Operations and Product Management
         </p>
 
@@ -70,7 +70,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mt-8 mb-4">Creator</h2>
         
         <p className="text-base text-muted-foreground sm:text-lg">
-          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life's story; it doesn't define me entirely. My hobbies filled in the gaps and learned life lessons to help shape my worldview.
+          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life's story; it doesn't define me entirely. <a href="https://justinortizcreatives.com/" className="text-primary hover:underline">My hobbies</a> filled in the gaps and learned life lessons to help shape my worldview.
         </p>
         
         <p className="text-base text-muted-foreground sm:text-lg">
