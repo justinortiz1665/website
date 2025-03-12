@@ -31,10 +31,8 @@ export function MobileNav() {
           </Link>
           <button 
             onClick={() => {
-              const blogUrl = getSiteConfig().blogUrl;
-              if (blogUrl) {
-                window.open(blogUrl, '_blank', 'noopener,noreferrer');
-              }
+              // For Next.js static export, directly use the URL
+              window.open('https://substack.com/@justinbortiz', '_blank', 'noopener,noreferrer');
               setOpen(false);
             }} 
             className="text-lg font-medium hover:text-primary text-left w-full border-0 bg-transparent p-0"
