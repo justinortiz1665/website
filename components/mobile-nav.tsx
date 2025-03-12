@@ -29,9 +29,18 @@ export function MobileNav() {
           <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             About
           </Link>
-          <Link href={getSiteConfig().blogUrl} className="text-lg font-medium hover:text-primary">
+          <button 
+            onClick={() => {
+              const blogUrl = getSiteConfig().blogUrl;
+              if (blogUrl) {
+                window.open(blogUrl, '_blank', 'noopener,noreferrer');
+              }
+              setOpen(false);
+            }} 
+            className="text-lg font-medium hover:text-primary text-left w-full border-0 bg-transparent p-0"
+          >
             Blog
-          </Link>
+          </button>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             Portfolio
           </Link>
