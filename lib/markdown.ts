@@ -4,6 +4,7 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
 
 // Define the content directory path
 const contentDirectory = process.cwd() + '/content'
@@ -152,16 +153,22 @@ export function getAllTags(): string[] {
 
 // Convert markdown content to HTML
 export async function markdownToHtml(markdown: string): Promise<string> {
-  // Ensure proper spacing around headings and lists for better rendering
-  const processedMarkdown = markdown
-    // Ensure headings have proper spacing before them
-    .replace(/\n(#{1,6})\s/g, '\n\n$1 ')
-    // Ensure lists have proper spacing
-    .replace(/\n-\s/g, '\n\n- ');
+  // Skip empty markdown
+  if (!markdown) return ''
   
-  const result = await remark()
-    .use(html, { sanitize: false }) // Don't sanitize to allow proper HTML
-    .process(processedMarkdown);
-  
-  return result.toString();
+  try {
+    // Process the markdown with GitHub-flavored markdown support
+    const result = await remark()
+      .use(remarkGfm) // Add GitHub Flavored Markdown (tables, strikethrough, etc.)
+      .use(html, { 
+        sanitize: false,  // Don't sanitize to preserve HTML elements
+        allowDangerousHtml: true // Allow HTML in markdown
+      })
+      .process(markdown)
+    
+    return result.toString()
+  } catch (error) {
+    console.error('Error processing markdown:', error)
+    return ''
+  }
 }
