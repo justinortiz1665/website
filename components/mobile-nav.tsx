@@ -8,9 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { getSiteConfig } from "@/lib/env"
 import { ExternalLink } from "@/components/external-link"
+import { getSocialLinks } from "@/lib/env"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
+  const socialLinks = getSocialLinks()
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -31,13 +33,15 @@ export function MobileNav() {
           <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             About
           </Link>
-          <ExternalLink
-            type="blog"
-            className="text-lg font-medium hover:text-primary text-left w-full border-0 bg-transparent p-0 block"
-            onClick={() => setOpen(false)}
+          <Link 
+            href={socialLinks.blog || "https://substack.com"} 
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)} 
+            className="text-lg font-medium hover:text-primary"
           >
             Blog
-          </ExternalLink>
+          </Link>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             Portfolio
           </Link>

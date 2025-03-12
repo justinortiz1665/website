@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from 'next/link'
@@ -13,20 +14,25 @@ export const DEFAULT_URLS = {
 }
 
 interface ExternalLinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
-  href: string
-  children: React.ReactNode
-  className?: string
+  type?: string;
+  href?: string;
+  children: React.ReactNode;
+  className?: string;
 }
 
 export function ExternalLink({ 
+  type, 
   href, 
   children, 
   className, 
   ...props 
 }: ExternalLinkProps) {
+  // Use the provided href or fallback to default URL if type is provided
+  const linkHref = href || (type ? DEFAULT_URLS[type as keyof typeof DEFAULT_URLS] || '#' : '#');
+  
   return (
     <Link
-      href={href}
+      href={linkHref}
       target="_blank"
       rel="noopener noreferrer"
       className={cn(className)}
