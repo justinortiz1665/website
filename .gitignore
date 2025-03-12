@@ -149,3 +149,7 @@ template.md
 
 # Cache directory
 /cache/
+
+# Attached assets 
+/attached_assets/
+*.txt
