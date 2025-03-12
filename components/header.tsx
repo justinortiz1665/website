@@ -1,124 +1,79 @@
-
 "use client"
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { ExternalLink } from '@/components/external-link'
-import { MobileNav } from '@/components/mobile-nav'
-import { cn } from '@/lib/utils'
-
+import Link from "next/link"
+import { useState } from "react"
+import { Search } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { MobileNav } from "@/components/mobile-nav"
+import { getSiteConfig } from "@/lib/env"
+import { ExternalLink } from "@/components/external-link"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
-export function Header() {
-  const pathname = usePathname()
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  // Environment variables for external links
-  const BLOG_URL = process.env.NEXT_PUBLIC_BLOG_URL || 'https://substack.com/@justinbortiz'
-
-  const NavItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/projects', label: 'Projects' },
-    { href: BLOG_URL, label: 'Blog', isExternal: true },
-  ]
-
-  const isActive = (path: string) => {
-    if (path === '/') {
-      return pathname === path
-    }
-    return pathname?.startsWith(path)
-  }
+export default function Header() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/90 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/90">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Justin Ortiz</span>
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
+        <div className="flex items-center gap-4">
+          <MobileNav />
+          <Link href="/" className="text-xl font-semibold">
+            Justin Ortiz, ATC
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex md:flex-1 md:justify-center">
-          <NavigationMenu>
+        <div className="flex items-center gap-4">
+          <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
-              {NavItems.map((item, index) => {
-                if (item.isExternal) {
-                  return (
-                    <NavigationMenuItem key={index}>
-                      <ExternalLink
-                        href={item.href}
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        {item.label}
-                      </ExternalLink>
-                    </NavigationMenuItem>
-                  )
-                }
-
-                return (
-                  <NavigationMenuItem key={index}>
-                    <Link href={item.href} legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          isActive(item.href) && "bg-accent text-accent-foreground"
-                        )}
-                      >
-                        {item.label}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                )
-              })}
+              <NavigationMenuItem>
+                <Link href="/about" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    About
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <ExternalLink
+                  type="blog"
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
+                >
+                  Blog
+                </ExternalLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/#portfolio" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                    Portfolio
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <div className="flex flex-1 items-center justify-end md:hidden">
-          <button
-            onClick={() => setMobileMenuOpen(true)}
-            className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:text-gray-100"
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
+          {isSearchOpen ? (
+            <div className="w-full animate-in fade-in slide-in-from-top-2 md:w-64">
+              <Input
+                type="search"
+                placeholder="Search..."
+                className="w-full"
+                autoFocus
+                onBlur={() => setIsSearchOpen(false)}
               />
-            </svg>
-          </button>
+            </div>
+          ) : (
+            <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)} className="shrink-0">
+              <Search className="h-5 w-5" />
+              <span className="sr-only">Search</span>
+            </Button>
+          )}
         </div>
-
-        {/* Mobile Navigation */}
-        <MobileNav
-          items={NavItems}
-          open={mobileMenuOpen}
-          onClose={() => setMobileMenuOpen(false)}
-        />
       </div>
     </header>
   )
 }
-
-export default Header
