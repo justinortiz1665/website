@@ -152,6 +152,16 @@ export function getAllTags(): string[] {
 
 // Convert markdown content to HTML
 export async function markdownToHtml(markdown: string): Promise<string> {
-  const result = await remark().use(html).process(markdown)
-  return result.toString()
+  // Ensure proper spacing around headings and lists for better rendering
+  const processedMarkdown = markdown
+    // Ensure headings have proper spacing before them
+    .replace(/\n(#{1,6})\s/g, '\n\n$1 ')
+    // Ensure lists have proper spacing
+    .replace(/\n-\s/g, '\n\n- ');
+  
+  const result = await remark()
+    .use(html, { sanitize: false }) // Don't sanitize to allow proper HTML
+    .process(processedMarkdown);
+  
+  return result.toString();
 }
