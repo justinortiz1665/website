@@ -16,7 +16,7 @@ export default function Home() {
         <div className="order-1 px-4 md:order-none md:px-0">
           <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
             <Image
-              src={process.env.NEXT_PUBLIC_HOMEPAGE_IMAGE || process.env.NEXT_PUBLIC_AVATAR_URL || "/placeholder.svg"}
+              src={process.env.NEXT_PUBLIC_DEFAULT_PROJECT_IMAGE || process.env.NEXT_PUBLIC_AVATAR_URL || "/placeholder.svg"}
               alt="Profile Image"
               fill
               className="object-cover"
