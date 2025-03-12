@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { getEnv } from "@/lib/env"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -28,7 +29,7 @@ export function MobileNav() {
           <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             About
           </Link>
-          <Link href="#" onClick={(e) => e.preventDefault()} className="text-lg font-medium hover:text-primary">
+          <Link href={getEnv('BLOG_URL', '#')} className="text-lg font-medium hover:text-primary">
             Blog
           </Link>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">

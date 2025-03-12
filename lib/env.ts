@@ -28,5 +28,6 @@ export const getMediaUrls = () => ({
 // Site configuration
 export const getSiteConfig = () => ({
   siteName: getEnv('SITE_NAME', 'Next.js Portfolio'),
-  siteDescription: getEnv('SITE_DESCRIPTION', 'A portfolio built with Next.js')
+  siteDescription: getEnv('SITE_DESCRIPTION', 'A portfolio built with Next.js'),
+  blogUrl: getEnv('BLOG_URL', '#')
 })
