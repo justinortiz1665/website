@@ -68,15 +68,15 @@
 }
 
 .prose blockquote {
-  @apply border-l-4 border-muted pl-4 italic my-4;
+  @apply border-l-4 border-gray-200 pl-4 italic my-4;
 }
 
 .prose code {
-  @apply bg-muted px-1 py-0.5 rounded text-sm;
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
 }
 
 .prose pre {
-  @apply bg-muted p-4 rounded-md overflow-x-auto my-4;
+  @apply bg-gray-100 p-4 rounded-md overflow-x-auto my-4;
 }
 
 .prose img {
@@ -84,5 +84,5 @@
 }
 
 .prose hr {
-  @apply my-8 border-muted;
+  @apply my-8 border-gray-200;
 }
