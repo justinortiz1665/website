@@ -6,6 +6,7 @@ import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { getSiteConfig } from "@/lib/env"
+import { ExternalLink } from "@/components/external-link"
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
@@ -29,18 +30,13 @@ export function MobileNav() {
           <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             About
           </Link>
-          <button 
-            onClick={() => {
-              const blogUrl = getSiteConfig().blogUrl;
-              if (blogUrl) {
-                window.open(blogUrl, '_blank', 'noopener,noreferrer');
-              }
-              setOpen(false);
-            }} 
-            className="text-lg font-medium hover:text-primary text-left w-full border-0 bg-transparent p-0"
+          <ExternalLink
+            type="blog"
+            className="text-lg font-medium hover:text-primary text-left w-full border-0 bg-transparent p-0 block"
+            onClick={() => setOpen(false)}
           >
             Blog
-          </button>
+          </ExternalLink>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             Portfolio
           </Link>
