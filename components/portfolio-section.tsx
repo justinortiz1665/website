@@ -92,7 +92,7 @@ export default function PortfolioSection({
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="outline" className="text-xs rounded-full border border-muted-foreground/30">
+                    <Badge key={tag} variant="outline" className="text-xs rounded-full border border-muted-foreground/30 bg-gray-100">
                       {tag}
                     </Badge>
                   ))}
