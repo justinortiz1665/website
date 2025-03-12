@@ -26,6 +26,7 @@ export function Header() {
   const BLOG_URL = process.env.NEXT_PUBLIC_BLOG_URL || 'https://substack.com/@justinbortiz'
 
   const NavItems = [
+    { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
     { href: '/projects', label: 'Projects' },
     { href: BLOG_URL, label: 'Blog', isExternal: true },
@@ -40,15 +41,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-gray-200 bg-white/90 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-950/90">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="flex">
-          <Link href="/" className="flex items-center space-x-2">
+      <div className="container flex h-16 items-center">
+        <div className="mr-4 flex">
+          <Link href="/" className="mr-6 flex items-center space-x-2">
             <span className="font-bold">Justin Ortiz</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex md:flex-1 md:justify-center">
           <NavigationMenu>
             <NavigationMenuList>
               {NavItems.map((item, index) => {
