@@ -21,16 +21,8 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-4">
           <MobileNav />
-          <Link href="/" className="flex items-center gap-2">
-            {process.env.NEXT_PUBLIC_LOGO_URL ? (
-              <img 
-                src={process.env.NEXT_PUBLIC_LOGO_URL} 
-                alt="Logo" 
-                className="h-8 w-auto" 
-              />
-            ) : (
-              <span className="text-xl font-semibold">Justin Ortiz, ATC</span>
-            )}
+          <Link href="/" className="text-xl font-semibold">
+            Justin Ortiz, ATC
           </Link>
         </div>
 
