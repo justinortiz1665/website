@@ -70,7 +70,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mt-8 mb-4">Creator</h2>
         
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life's story; it doesn't define me entirely. <a href="https://justinortizcreatives.com/" className="text-primary hover:underline">My hobbies</a> filled in the gaps and learned life lessons to help shape my worldview.
+          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life's story; it doesn't define me entirely. My hobbies filled in the gaps and learned life lessons to help shape my worldview.
         </p>
         
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
