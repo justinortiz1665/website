@@ -98,18 +98,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       {contentHtml && (
         <section className="px-4 md:px-0">
           <h2 className="mb-6 text-2xl font-bold">Additional Information</h2>
-          <div 
-            className="prose prose-lg max-w-none 
-              prose-headings:font-bold prose-headings:text-black 
-              prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 
-              prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3 
-              prose-p:text-base prose-p:my-2
-              prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-4
-              prose-li:my-1
-              prose-strong:font-bold
-            " 
-            dangerouslySetInnerHTML={{ __html: contentHtml }} 
-          />
+          <div className="prose prose-gray prose-headings:font-bold prose-headings:text-black prose-h3:text-xl prose-h4:text-lg prose-h4:mt-4 prose-p:mt-2 prose-ul:list-disc prose-ul:pl-5 prose-li:mt-1 max-w-none" dangerouslySetInnerHTML={{ __html: contentHtml }} />
         </section>
       )}
 
