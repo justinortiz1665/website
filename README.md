@@ -104,16 +104,7 @@ project-root/
 - Dark mode support
 - Blog section with categories and tags
 - Contact form integration
-- Search functionality
-- Image optimization and lazy loading
 - Analytics integration
-
-## Contributing
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## License
 MIT License - See LICENSE file for details
