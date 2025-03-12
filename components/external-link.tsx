@@ -2,7 +2,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { getSiteConfig } from "@/lib/env"
 
 interface ExternalLinkProps {
   type: "blog" | "twitter" | "github" | "linkedin" | "youtube" | "instagram"
@@ -11,37 +10,50 @@ interface ExternalLinkProps {
   onClick?: () => void
 }
 
+// Default fallback URLs that don't contain personal information
+const DEFAULT_URLS = {
+  blog: "https://substack.com",
+  twitter: "https://twitter.com",
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+  youtube: "https://youtube.com",
+  instagram: "https://instagram.com"
+}
+
 export function ExternalLink({ type, className, children, onClick }: ExternalLinkProps) {
-  const [href, setHref] = useState("https://substack.com/")
+  const [href, setHref] = useState(DEFAULT_URLS[type])
   
   useEffect(() => {
-    // Only run on client side
+    // This runs only on the client side, after hydration
+    // Fetch the environment variable directly
     let url = ""
     
+    // Check for the corresponding environment variable based on type
     switch (type) {
       case "blog":
-        url = getSiteConfig().blogUrl || "https://substack.com/"
+        url = process.env.NEXT_PUBLIC_BLOG_URL || ""
         break
       case "twitter":
-        url = getSiteConfig().twitter || "https://twitter.com"
+        url = process.env.NEXT_PUBLIC_TWITTER_URL || ""
         break
       case "github":
-        url = getSiteConfig().github || "https://github.com"
+        url = process.env.NEXT_PUBLIC_GITHUB_URL || ""
         break
       case "linkedin":
-        url = getSiteConfig().linkedin || "https://linkedin.com"
+        url = process.env.NEXT_PUBLIC_LINKEDIN_URL || ""
         break
       case "youtube":
-        url = getSiteConfig().youtube || "https://youtube.com"
+        url = process.env.NEXT_PUBLIC_YOUTUBE_URL || ""
         break
       case "instagram":
-        url = getSiteConfig().instagram || "https://instagram.com"
+        url = process.env.NEXT_PUBLIC_INSTAGRAM_URL || ""
         break
-      default:
-        url = "https://substack.com/"
     }
     
-    setHref(url)
+    // Only update if we have a valid URL from the environment
+    if (url && url.trim() !== "") {
+      setHref(url)
+    }
   }, [type])
   
   return (
