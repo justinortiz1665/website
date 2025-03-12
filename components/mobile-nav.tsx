@@ -29,16 +29,7 @@ export function MobileNav() {
           <Link href="/about" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             About
           </Link>
-          <Link 
-            href={getSiteConfig().blogUrl} 
-            className="text-lg font-medium hover:text-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open(getSiteConfig().blogUrl, '_blank', 'noopener,noreferrer');
-            }}
-          >
+          <Link href={getSiteConfig().blogUrl} className="text-lg font-medium hover:text-primary">
             Blog
           </Link>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
