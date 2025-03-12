@@ -14,26 +14,26 @@ export default function AboutCarousel() {
   const scrollPrev = () => emblaApi?.scrollPrev()
   const scrollNext = () => emblaApi?.scrollNext()
 
-  // Images array with placeholder images (replace with your actual images)
+  // Images array using environment variables with fallbacks
   const images = [
     {
-      src: "/placeholder.svg?height=500&width=400",
+      src: process.env.NEXT_PUBLIC_ABOUT_IMAGE_1 || "/placeholder.svg?height=500&width=400",
       alt: "About Image 1",
     },
     {
-      src: "/placeholder.svg?height=500&width=400",
+      src: process.env.NEXT_PUBLIC_ABOUT_IMAGE_2 || "/placeholder.svg?height=500&width=400",
       alt: "About Image 2",
     },
     {
-      src: "/placeholder.svg?height=500&width=400",
+      src: process.env.NEXT_PUBLIC_ABOUT_IMAGE_3 || "/placeholder.svg?height=500&width=400",
       alt: "About Image 3",
     },
     {
-      src: "/placeholder.svg?height=500&width=400",
+      src: process.env.NEXT_PUBLIC_ABOUT_IMAGE_4 || "/placeholder.svg?height=500&width=400",
       alt: "About Image 4",
     },
     {
-      src: "/placeholder.svg?height=500&width=400",
+      src: process.env.NEXT_PUBLIC_ABOUT_IMAGE_5 || "/placeholder.svg?height=500&width=400",
       alt: "About Image 5",
     },
   ]
