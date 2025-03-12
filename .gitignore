@@ -139,6 +139,7 @@ package-lock.json
 
 # content - uncommented to exclude actual content from git
 /content/projects/*.md
+/content/archive/
 # Make sure to ignore the template file specifically, even if you add other files back to git
 /public/media/projects/*
 !/public/media/projects/.gitkeep
