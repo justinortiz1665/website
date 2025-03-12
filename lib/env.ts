@@ -15,7 +15,8 @@ export const getSocialLinks = () => ({
   github: getEnv('GITHUB_URL', 'https://github.com'),
   linkedin: getEnv('LINKEDIN_URL', 'https://linkedin.com'),
   youtube: getEnv('YOUTUBE_URL', 'https://youtube.com'),
-  instagram: getEnv('INSTAGRAM_URL', 'https://instagram.com')
+  instagram: getEnv('INSTAGRAM_URL', 'https://instagram.com'),
+  blog: getEnv('BLOG_URL', 'https://substack.com')
 })
 
 // Media URLs
