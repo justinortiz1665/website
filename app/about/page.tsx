@@ -1,4 +1,11 @@
 
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About",
+}
+
+
 import { Card } from "@/components/ui/card"
 import AboutCarousel from "@/components/about-carousel"
 

@@ -10,7 +10,10 @@ const inter = Inter({ subsets: ["latin"] })
 const { siteName, siteDescription } = getSiteConfig()
 
 export const metadata: Metadata = {
-  title: siteName,
+  title: {
+    default: siteName,
+    template: `%s | ${siteName}`,
+  },
   description: siteDescription,
 }
 

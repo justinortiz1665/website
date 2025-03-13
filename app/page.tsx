@@ -3,6 +3,11 @@ import Image from "next/image"
 import Link from "next/link"
 import PortfolioSection from "@/components/portfolio-section"
 import { getAllProjects, getAllTags } from "@/lib/markdown"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Home",
+}
 
 export default function Home() {
   const projects = getAllProjects()

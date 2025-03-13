@@ -5,6 +5,22 @@ import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
 import { getProjectBySlug, markdownToHtml, getProjectSlugs } from "@/lib/markdown"
 import { YoutubeEmbed } from "@/components/youtube-embed"
+import { Metadata } from "next"
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const project = getProjectBySlug(params.slug)
+  
+  if (!project) {
+    return {
+      title: 'Project Not Found'
+    }
+  }
+  
+  return {
+    title: project.title,
+    description: project.summary || project.title
+  }
+}
 
 export function generateStaticParams() {
   const slugs = getProjectSlugs()
