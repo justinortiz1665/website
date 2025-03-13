@@ -87,7 +87,7 @@ export default function PortfolioSection({
               className="group relative overflow-hidden rounded-lg border bg-background p-2"
             >
               <Image
-                src={project.image || getMediaUrls().defaultProjectImage}
+                src={typeof project.image === 'string' ? project.image : (project.image?.src || getMediaUrls().defaultProjectImage)}
                 alt={project.title}
                 width={600}
                 height={600}
