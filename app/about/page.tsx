@@ -19,7 +19,7 @@ export default function AboutPage() {
       {/* Header */}
       <div className="flex flex-col gap-4 px-4 md:px-0">
         <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
-          Hi, I'm Justin Ortiz
+          Traded Protein Shakes for Coffee: The Devolution of an Athletic Trainer
         </h1>
       </div>
 
@@ -30,6 +30,10 @@ export default function AboutPage() {
 
       {/* About Text */}
       <div className="prose prose-gray max-w-none px-4 md:px-0">
+        <p className="text-base text-muted-foreground sm:text-lg mb-6">
+          Hi, I'm Justin Ortiz.
+        </p>
+        
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
           Currently based in the Bay Area.
         </p>
