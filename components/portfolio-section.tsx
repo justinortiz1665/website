@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink } from "@/components/external-link"
 import { Github } from "lucide-react"
 import type { Project } from "@/lib/markdown"
-import { getMediaUrls } from "@/lib/env"
+import { getMediaUrls, getSocialLinks } from "@/lib/env"
 
 export default function PortfolioSection({
   projects,
@@ -48,7 +48,7 @@ export default function PortfolioSection({
         <div className="flex items-center gap-2">
           <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-4xl">Portfolio</h2>
           <ExternalLink 
-            href={getMediaUrls().github || process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
+            href={getSocialLinks().github || process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
             className="inline-flex items-center"
           >
             <Github className="h-6 w-6 text-primary" />
