@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import { Github } from "lucide-react"
 import { getProjectBySlug, markdownToHtml, getProjectSlugs } from "@/lib/markdown"
 import { YoutubeEmbed } from "@/components/youtube-embed"
 import { Metadata } from "next"
@@ -128,8 +129,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       )}
 
-      {/* Back Button */}
-      <div className="mt-4 px-4 md:px-0">
+      {/* Action Buttons */}
+      <div className="flex flex-wrap gap-3 mt-4 px-4 md:px-0">
+        {project.githubUrl && (
+          <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
+            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" /> View on GitHub
+            </a>
+          </Button>
+        )}
+        {project.contactUrl && (
+          <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
+            <a href={project.contactUrl}>Contact Me</a>
+          </Button>
+        )}
         <Button variant="outline" asChild>
           <a href="/#portfolio">Back to Portfolio</a>
         </Button>

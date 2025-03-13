@@ -36,6 +36,9 @@ export interface ProjectFrontmatter {
   tags: string[]
   // Draft flag to indicate project is not ready to be displayed on the homepage
   draft?: boolean
+  // Contact and GitHub URLs
+  contactUrl?: string
+  githubUrl?: string
   features?: {
     title: string
     description: string
