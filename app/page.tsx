@@ -4,6 +4,15 @@ import Link from "next/link"
 import PortfolioSection from "@/components/portfolio-section"
 import { getAllProjects, getAllTags } from "@/lib/markdown"
 import { Metadata } from "next"
+import { Github, ExternalLink } from "lucide-react"; // Assuming these are imported from a library
+
+// Function to retrieve social links (needs implementation based on your .env setup)
+const getSocialLinks = () => {
+  return {
+    github: process.env.NEXT_PUBLIC_GITHUB_URL || ""
+  }
+}
+
 
 export const metadata: Metadata = {
   title: "Home",
