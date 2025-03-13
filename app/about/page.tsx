@@ -57,11 +57,11 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mt-8 mb-4">Journey</h2>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          I began my career in athletic training, driven by a fascination with human movement and rehabilitation. Over the years, I&apos;ve been privileged to work in incredible environments, including Drum Corps International, high schools, the NFL, NCAA Division I, and the MLS. These experiences taught me invaluable lessons—mastering a craft, attention to detail, and the power of grit—all of which I now apply to other areas of interest.
+          I began my career in athletic training, driven by a fascination with human movement and rehabilitation. Over the years, I've been privileged to work in incredible environments, including Drum Corps International, high schools, the NFL, NCAA Division I, and the MLS. These experiences taught me invaluable lessons—mastering a craft, attention to detail, and the power of grit—all of which I now apply to other areas of interest.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          After 10 years in sports medicine, I&apos;m ready to embark on a new path. My current focus is on sports science, data analytics, and the rapidly evolving field of artificial intelligence. I&apos;m dedicating this time to developing new skills and exploring the opportunities that lie ahead.
+          After 10 years in sports medicine, I&apos;m ready to embark on a new path. My current focus is on sports science, data analytics, and the rapidly evolving field of artificial intelligence. I'm dedicating this time to developing new skills and exploring the opportunities that lie ahead.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Philosophy</h2>
