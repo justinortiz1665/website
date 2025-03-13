@@ -5,6 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { ExternalLink } from "@/components/external-link"
+import { Github } from "lucide-react"
 import type { Project } from "@/lib/markdown"
 import { getMediaUrls } from "@/lib/env"
 
@@ -43,7 +45,15 @@ export default function PortfolioSection({
   return (
     <section id="portfolio" className="container space-y-6 px-4 md:space-y-8 md:px-0">
       <div className="flex flex-col gap-3 md:gap-4">
-        <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-4xl">Portfolio</h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-2xl font-bold leading-tight tracking-tighter md:text-4xl">Portfolio</h2>
+          <ExternalLink 
+            href={getMediaUrls().github || process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
+            className="inline-flex items-center"
+          >
+            <Github className="h-6 w-6" />
+          </ExternalLink>
+        </div>
         <p className="text-base text-muted-foreground sm:text-lg">
           Explore my latest projects and professional work in AI, software development, and data analytics.
         </p>

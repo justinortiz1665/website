@@ -48,8 +48,11 @@ export default function Home() {
             Hi, I'm Justin Ortiz. Currently based in the Bay Area. I'm a builder and explorer. I am an athletic trainer with 10+ years of sports medicine experience. A former content creator and a techie at heart. Always looking for new opportunities to transition to business operations and product management roles.
           </p>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
-            <Button asChild className="bg-black hover:bg-primary text-white transition-colors">
+            <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
               <Link href="/about">Learn More</Link>
+            </Button>
+            <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
+              <Link href="/contact">Contact Me</Link>
             </Button>
             <Button variant="outline" asChild>
               <Link href="#portfolio">View Portfolio</Link>
