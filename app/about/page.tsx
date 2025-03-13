@@ -100,9 +100,12 @@ export default function AboutPage() {
 
         {/* Call to Action Buttons */}
         <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-          <Button asChild className="text-white bg-primary hover:bg-black hover:text-white">
-            <Link href="/contact">Contact Me</Link>
-          </Button>
+          <Link 
+            href="/contact"
+            className="inline-flex items-center gap-2 font-medium"
+          >
+            <Button className="w-full text-white bg-primary hover:bg-black hover:text-white">Contact Me</Button>
+          </Link>
           <ExternalLink 
             href={socialLinks.linkedin}
             className="inline-flex items-center gap-2 font-medium"
