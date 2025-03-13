@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -44,6 +43,9 @@ export function MobileNav() {
           </Link>
           <Link href="/#portfolio" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
             Portfolio
+          </Link>
+          <Link href="/contact" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">
+            Contact Me
           </Link>
         </nav>
       </SheetContent>
