@@ -97,3 +97,70 @@ export default function AboutPage() {
     </div>
   )
 }
+import { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import AboutCarousel from "@/components/about-carousel"
+import { Button } from "@/components/ui/button"
+import { ExternalLink } from "@/components/external-link"
+import { getSocialLinks } from "@/lib/env"
+
+export const metadata: Metadata = {
+  title: "About",
+}
+
+export default function AboutPage() {
+  const socialLinks = getSocialLinks()
+  
+  return (
+    <div className="container flex flex-col gap-8 py-6 md:gap-12 md:py-12">
+      <div className="flex flex-col gap-8 md:flex-row">
+        <div className="md:w-1/2">
+          <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
+            About Me
+          </h1>
+          <div className="mt-4 space-y-4">
+            <p>
+              I'm Justin Ortiz, an athletic trainer with over 10 years of experience in sports medicine. 
+              Throughout my career, I've worked with a diverse range of athletes, from youth to professional levels.
+            </p>
+            <p>
+              My passion lies at the intersection of healthcare, technology, and innovation. I'm constantly seeking 
+              ways to leverage data and digital tools to enhance athletic performance and recovery.
+            </p>
+            <p>
+              Beyond my professional work, I'm an avid Lego builder, technology enthusiast, and lifelong learner. 
+              I'm currently based in the Bay Area, where I enjoy exploring the tech scene and outdoor activities.
+            </p>
+            <p>
+              I'm looking to transition my skills into business operations and product management roles, where I can 
+              combine my healthcare expertise with my passion for technology and innovation.
+            </p>
+            
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+              <Button asChild className="text-white bg-primary hover:bg-black">
+                <Link href="/contact">Contact Me</Link>
+              </Button>
+              <ExternalLink 
+                href={socialLinks.linkedin}
+                className="inline-flex items-center gap-2 font-medium"
+              >
+                <Button className="w-full text-white bg-primary hover:bg-black">Connect on LinkedIn</Button>
+              </ExternalLink>
+              <ExternalLink 
+                href={socialLinks.github}
+                className="inline-flex items-center gap-2 font-medium"
+              >
+                <Button className="w-full text-white bg-primary hover:bg-black">View on GitHub</Button>
+              </ExternalLink>
+            </div>
+          </div>
+        </div>
+        <div className="md:w-1/2">
+          <AboutCarousel />
+        </div>
+      </div>
+    </div>
+  )
+}
