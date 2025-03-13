@@ -1,4 +1,3 @@
-
 // Environment variable utility functions
 
 /**
