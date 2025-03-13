@@ -50,7 +50,7 @@ export default function ContactPage() {
                   href={socialLinks.linkedin} 
                   className="inline-flex items-center gap-2 text-lg font-medium hover:underline"
                 >
-                  <Button className="w-full">Connect on LinkedIn</Button>
+                  <Button className="w-full text-white bg-primary hover:bg-black">Connect on LinkedIn</Button>
                 </ExternalLink>
               </div>
               
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   href={`mailto:${process.env.NEXT_PUBLIC_EMAIL || 'contact@example.com'}`} 
                   className="inline-flex items-center gap-2 text-lg font-medium hover:underline"
                 >
-                  <Button className="w-full">Email Me</Button>
+                  <Button className="w-full text-white bg-primary hover:bg-black">Email Me</Button>
                 </ExternalLink>
               </div>
             </div>
