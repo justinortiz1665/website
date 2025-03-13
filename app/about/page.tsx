@@ -33,7 +33,7 @@ export default function AboutPage() {
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
           Hi, I&apos;m Justin Ortiz.
         </p>
-        
+
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
           Currently based in the Bay Area.
         </p>

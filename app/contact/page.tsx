@@ -39,7 +39,7 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">Justin Ortiz, ATC</h2>
               <p className="text-base text-muted-foreground sm:text-lg mb-6">
-                I'm always open to new opportunities, collaborations, or just a friendly chat.
+                I&apos;m always open to new opportunities, collaborations, or just a friendly chat.
                 Feel free to reach out through any of the channels below.
               </p>
             </div>
