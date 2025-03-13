@@ -51,7 +51,7 @@ export default function PortfolioSection({
             href={getMediaUrls().github || process.env.NEXT_PUBLIC_GITHUB_URL || "#"}
             className="inline-flex items-center"
           >
-            <Github className="h-6 w-6" />
+            <Github className="h-6 w-6 text-primary" />
           </ExternalLink>
         </div>
         <p className="text-base text-muted-foreground sm:text-lg">
