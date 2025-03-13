@@ -107,13 +107,13 @@ export default function AboutPage() {
             href={socialLinks.linkedin}
             className="inline-flex items-center gap-2 font-medium"
           >
-            <Button className="w-full text-white bg-primary hover:bg-black">Connect on LinkedIn</Button>
+            <Button className="w-full text-white bg-primary hover:bg-black hover:text-white">Connect on LinkedIn</Button>
           </ExternalLink>
           <ExternalLink 
             href={socialLinks.github}
             className="inline-flex items-center gap-2 font-medium"
           >
-            <Button className="w-full text-white bg-primary hover:bg-black">View on GitHub</Button>
+            <Button className="w-full text-white bg-primary hover:bg-black hover:text-white">View on GitHub</Button>
           </ExternalLink>
         </div>
       </div>
