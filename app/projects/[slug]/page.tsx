@@ -118,7 +118,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <section className="px-4 md:px-0">
         <h2 className="mb-6 text-2xl font-bold">Project Features</h2>
         <div className="grid gap-6 sm:grid-cols-2 md:gap-8">
-          {project.features.map((feature, index) => (
+          {project.features?.map((feature, index) => (
             <Card key={index} className="p-6">
               <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
