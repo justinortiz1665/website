@@ -53,12 +53,28 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
             {project.title}
           </h1>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.tags.map((tag) => (
               <Badge key={tag} variant="outline" className="rounded-full border border-muted-foreground/30 bg-gray-100">
                 {tag}
               </Badge>
             ))}
+          </div>
+          
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-3 mt-2 mb-4">
+            {project.githubUrl && (
+              <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> View on GitHub
+                </a>
+              </Button>
+            )}
+            {project.contactUrl && (
+              <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
+                <a href={project.contactUrl}>Contact Me</a>
+              </Button>
+            )}
           </div>
         </div>
         <div className="order-first px-4 md:order-last md:px-0">
@@ -129,20 +145,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </section>
       )}
 
-      {/* Action Buttons */}
+      {/* Back to Portfolio Button */}
       <div className="flex flex-wrap gap-3 mt-4 px-4 md:px-0">
-        {project.githubUrl && (
-          <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" /> View on GitHub
-            </a>
-          </Button>
-        )}
-        {project.contactUrl && (
-          <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
-            <a href={project.contactUrl}>Contact Me</a>
-          </Button>
-        )}
         <Button variant="outline" asChild>
           <a href="/#portfolio">Back to Portfolio</a>
         </Button>
