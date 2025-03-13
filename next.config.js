@@ -1,9 +1,16 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enables static HTML export for HostGator
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
+  // Add rewrites for SPA-like behavior
+  trailingSlash: true,
+  // Disable image optimization which requires server components
+  experimental: {
+    appDir: true
+  }
 }
 
 module.exports = nextConfig
