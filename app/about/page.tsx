@@ -31,7 +31,7 @@ export default function AboutPage() {
       {/* About Text */}
       <div className="prose prose-gray max-w-none px-4 md:px-0">
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          Hi, I'm Justin Ortiz.
+          Hi, I&apos;m Justin Ortiz.
         </p>
         
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
@@ -39,7 +39,7 @@ export default function AboutPage() {
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          I'm a builder and explorer.
+          I&apos;m a builder and explorer.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
@@ -61,17 +61,17 @@ export default function AboutPage() {
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          After 10 years in sports medicine, I'm ready to embark on a new path. My current focus is on sports science, data analytics, and the rapidly evolving field of artificial intelligence. I'm dedicating this time to developing new skills and exploring the opportunities that lie ahead.
+          After 10 years in sports medicine, I&apos;m ready to embark on a new path. My current focus is on sports science, data analytics, and the rapidly evolving field of artificial intelligence. I'm dedicating this time to developing new skills and exploring the opportunities that lie ahead.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Philosophy</h2>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          Throughout my life and career, I've been guided by two simple creeds: efficiency and care.
+          Throughout my life and career, I&apos;ve been guided by two simple creeds: efficiency and care.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          During my college days, I worked in the service industry. One instructor challenged me with a pivotal question: "How can I accomplish the same amount of tasks in fewer steps?" This mindset reshaped my approach to everything I do. While perfection is a journey, practice and repetition ensure the process becomes more refined over time.
+          During my college days, I worked in the service industry. One instructor challenged me with a pivotal question: &quot;How can I accomplish the same amount of tasks in fewer steps?&quot; This mindset reshaped my approach to everything I do. While perfection is a journey, practice and repetition ensure the process becomes more refined over time.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
@@ -79,27 +79,27 @@ export default function AboutPage() {
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          I take pride in my work, whether it's through attentive interactions with patients, dedicating time to those in need, or handling even the smallest tasks with effort and intention.
+          I take pride in my work, whether it&apos;s through attentive interactions with patients, dedicating time to those in need, or handling even the smallest tasks with effort and intention.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Creator</h2>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life's story; it doesn't define me entirely. My hobbies filled in the gaps and learned life lessons to help shape my worldview.
+          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life&apos;s story; it doesn&apos;t define me entirely. My hobbies filled in the gaps and learned life lessons to help shape my worldview.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          <strong>"Do or do not, there is no try."</strong> – Yoda
+          <strong>&quot;Do or do not, there is no try.&quot;</strong> – Yoda
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Connect</h2>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          If you'd like to learn more or follow my journey, feel free to reach out. My socials are linked below. I love collaborating, discovering something new, and building connections within the community.
+          If you&apos;d like to learn more or follow my journey, feel free to reach out. My socials are linked below. I love collaborating, discovering something new, and building connections within the community.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          P.S. Are you into Magic: The Gathering? Let's connect in the arena! Add me—mumbo92#99388, or if you're in the Bay Area, let's meet up for a game of Commander or Pauper!
+          P.S. Are you into Magic: The Gathering? Let&apos;s connect in the arena! Add me—mumbo92#99388, or if you&apos;re in the Bay Area, let&apos;s meet up for a game of Commander or Pauper!
         </p>
 
         {/* Call to Action Buttons */}
