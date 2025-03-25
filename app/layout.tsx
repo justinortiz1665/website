@@ -15,6 +15,19 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
+  openGraph: {
+    title: siteName,
+    description: siteDescription,
+    url: 'https://justinortiz.com',
+    siteName: siteName,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteName,
+    description: siteDescription,
+  },
 }
 
 export default function RootLayout({
