@@ -45,7 +45,7 @@ export default function Home() {
             Healthcare Professional & Lego Builder
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg md:text-xl">
-            From Helping Athletes Run Faster to Making Websites Load Slower.
+            Athletic Trainer Turned Programmer: Now Optimizing More Than Just Performance.
           </p>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
             <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">
