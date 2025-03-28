@@ -51,7 +51,7 @@ export default function AboutPage() {
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          On a journey to a new career in Business Operations and Product Management
+          On a journey to a new career in Product Operations and Management
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Journey</h2>
@@ -61,7 +61,7 @@ export default function AboutPage() {
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          After 10 years in sports medicine, I&apos;m ready to embark on a new path. My current focus is on sports science, data analytics, and the rapidly evolving field of artificial intelligence. I&apos;m dedicating this time to developing new skills and exploring the opportunities that lie ahead.
+          After 10 years in sports medicine, I&apos;m ready to embark on a new path. My current focus is on learning about product operations/management roles and responsibilities and expanding my skill set in the utilization and implementation of LLMs and AI agents. I&apos;m dedicating this time to developing new skills and exploring the opportunities that lie ahead.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">Philosophy</h2>
@@ -85,7 +85,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold mt-8 mb-4">Creator</h2>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
-          From my philosophy comes balance. Like many, my professional life has taken twists and turns. A career is just one chapter in life&apos;s story; it doesn&apos;t define me entirely. My hobbies filled in the gaps and learned life lessons to help shape my worldview.
+          As my professional life has taken twists and turns, a constant has been turning an idea into reality. Transforming a photograph into art, a conversation into media, or a prompt into an application. I have the passion and drive to manifest intangibles to tangibles. It is my get shit done mentality and refusing to believe that something is impossible.
         </p>
 
         <p className="text-base text-muted-foreground sm:text-lg mb-6">
