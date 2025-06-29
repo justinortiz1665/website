@@ -3,7 +3,6 @@
 
 A modern, responsive portfolio website template built with Next.js and Tailwind CSS. This template allows professionals to showcase their projects, skills, and experience with a clean, customizable interface.
 
-![Portfolio Template Preview](https://via.placeholder.com/800x400/000000/FFFFFF?text=Portfolio+Template+Preview)
 
 ## ✨ Features
 
