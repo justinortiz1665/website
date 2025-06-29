@@ -23,7 +23,7 @@ export function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] sm:w-[400px]">
         <SheetHeader>
-          <SheetTitle className="text-left text-lg font-bold">Justin Ortiz, ATC</SheetTitle>
+          <SheetTitle className="text-left text-lg font-bold">{process.env.NEXT_PUBLIC_SITE_NAME || "Your Name"}</SheetTitle>
         </SheetHeader>
         <nav className="mt-8 flex flex-col gap-4">
           <Link href="/" onClick={() => setOpen(false)} className="text-lg font-medium hover:text-primary">

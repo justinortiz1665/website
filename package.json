@@ -1,12 +1,21 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "portfolio-template",
+  "version": "1.0.0",
+  "description": "A modern, responsive portfolio website template built with Next.js and Tailwind CSS",
+  "keywords": ["nextjs", "portfolio", "template", "tailwind", "react", "typescript"],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio-template.git"
+  },
+  "homepage": "https://your-portfolio-template.vercel.app",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001 --hostname 0.0.0.0",
+    "dev": "next dev",
     "build": "rm -rf .next && next build",
     "export": "next export",
-    "start": "next start --port 3001 --hostname 0.0.0.0",
+    "start": "next start",
     "lint": "next lint --fix"
   },
   "dependencies": {

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteName,
     description: siteDescription,
-    url: 'https://justinortiz.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://your-portfolio.com',
     siteName: siteName,
     locale: 'en_US',
     type: 'website',

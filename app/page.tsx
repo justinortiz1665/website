@@ -42,10 +42,10 @@ export default function Home() {
         {/* Hero Content */}
         <div className="flex flex-col gap-4 px-4 md:px-0">
           <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
-            Healthcare Professional & Lego Builder
+            {process.env.NEXT_PUBLIC_HERO_TITLE || "Your Professional Title"}
           </h1>
           <p className="text-base text-muted-foreground sm:text-lg md:text-xl">
-            Athletic Trainer Turned Programmer: Now Optimizing More Than Just Performance.
+            {process.env.NEXT_PUBLIC_HERO_SUBTITLE || "Your compelling subtitle that describes what you do"}
           </p>
           <div className="flex flex-col gap-4 min-[400px]:flex-row">
             <Button asChild className="bg-primary hover:bg-black text-white hover:text-white transition-colors">

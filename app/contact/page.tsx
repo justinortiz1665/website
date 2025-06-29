@@ -37,7 +37,7 @@ export default function ContactPage() {
           
           <div className="space-y-6">
             <div>
-              <h2 className="text-2xl font-semibold mb-4">Justin Ortiz, ATC</h2>
+              <h2 className="text-2xl font-semibold mb-4">{process.env.NEXT_PUBLIC_SITE_NAME || "Your Name"}</h2>
               <p className="text-base text-muted-foreground sm:text-lg mb-6">
                 I'm always open to new opportunities, collaborations, or just a friendly chat.
                 Feel free to reach out through any of the channels below.

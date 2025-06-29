@@ -22,7 +22,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <MobileNav />
           <Link href="/" className="text-xl font-semibold">
-            Justin Ortiz, ATC
+            {process.env.NEXT_PUBLIC_SITE_NAME || "Your Name"}
           </Link>
         </div>
 

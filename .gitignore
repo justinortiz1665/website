@@ -104,7 +104,6 @@ dist
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -131,26 +130,15 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Replit specific files
+# Template specific ignores
+# Add personal files you don't want to commit to version control
+# PERSONAL_NOTES.md
+
+# Development/build artifacts
 .replit
+.breakpoints
 
-# package lock files
-package-lock.json
-
-# content - uncommented to exclude actual content from git
-/content/projects/*.md
-/content/archive/
-# Make sure to ignore the template file specifically, even if you add other files back to git
-/public/media/projects/*
-!/public/media/projects/.gitkeep
-
-# Personal notes
-PERSONAL_NOTES.md
-template.md
-
-# Cache directory
-/cache/
-
-# Attached assets 
-/attached_assets/
-*.txt
+# Optional: Ignore project content if you want to keep it local
+# /content/projects/*.md
+# /public/media/projects/*
+# !/public/media/projects/.gitkeep
